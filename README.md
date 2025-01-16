@@ -11,21 +11,7 @@
 ## 快速開始
 
 ### 1. 環境設定
-
-- 複製環境變數檔案：
-
-  ```bash
-  cp .env.example .env
-  ```
-
-- 設定資料庫連線資訊（編輯 `.env`）：
-  ```plaintext
-  DB_HOST=mysql
-  DB_PORT=3306
-  DB_USER=root
-  DB_PASSWORD=your_password
-  DB_NAME=hr_system
-  ```
+(設定我就寫死了比較簡單不用改)
 
 ### 2. 啟動服務
 
