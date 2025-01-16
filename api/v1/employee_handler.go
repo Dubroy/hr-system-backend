@@ -2,18 +2,24 @@ package v1
 
 import (
 	"hr-system-backend/models"
-	"hr-system-backend/services"
 	"net/http"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
 
-type EmployeeHandler struct {
-	service *services.EmployeeService
+// 首先定義一個介面
+type EmployeeServiceInterface interface {
+	CreateEmployee(employee *models.Employee) error
+	GetEmployee(id uint) (*models.Employee, error)
+	ListEmployees(page, pageSize int) ([]models.Employee, int64, error)
 }
 
-func NewEmployeeHandler(service *services.EmployeeService) *EmployeeHandler {
+type EmployeeHandler struct {
+	service EmployeeServiceInterface  // 使用介面而不是具體類型
+}
+
+func NewEmployeeHandler(service EmployeeServiceInterface) *EmployeeHandler {
 	return &EmployeeHandler{service: service}
 }
 

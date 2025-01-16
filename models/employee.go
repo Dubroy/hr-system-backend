@@ -18,7 +18,6 @@ type Employee struct {
 	Position      Position
 	Status        string         `gorm:"size:20;default:'active'"` // active, inactive, resigned
 	JoinDate      time.Time
-	ResignDate    *time.Time
 	CreatedAt     time.Time
 	UpdatedAt     time.Time
 	DeletedAt     gorm.DeletedAt `gorm:"index"`
