@@ -102,6 +102,34 @@ MIT
 
 ## api 範例
 
+生成請假
+```
+curl --location 'http://localhost:8080/api/v1/leaves' \
+--header 'Content-Type: application/json' \
+--data '{
+    "employee_id": 1,
+    "leave_type": "annual",
+    "start_date": 1705708800,
+    "end_date": 1705881600,
+    "reason": "Family vacation"
+  }'
+```
+請假列表
+```
+curl --location --request GET 'http://localhost:8080/api/v1/leaves' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "employeeCode": "EMP001",
+    "name": "張小明",
+    "email": "xming@example.com",
+    "phoneNumber": "0912345678",
+    "departmentId": 1,
+    "positionId": 1,
+    "status": "active",
+    "joinDate": "2024-03-20T00:00:00Z"
+  }'
+```
+
 ### 請假類型
 
 - annual: 年假
