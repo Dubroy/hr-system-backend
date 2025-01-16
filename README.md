@@ -1,0 +1,97 @@
+
+# HR System Backend
+
+人力資源管理系統後端服務，使用 Go 語言開發。
+
+## 系統需求
+
+- Go 1.21+
+- MySQL 8.0+
+- Make
+
+## 快速開始
+
+### 1. 環境設定
+
+- 複製環境變數檔案：
+  ```bash
+  cp .env.example .env
+  ```
+
+- 設定資料庫連線資訊（編輯 `.env`）：
+  ```plaintext
+  DB_HOST=mysql
+  DB_PORT=3306
+  DB_USER=root
+  DB_PASSWORD=your_password
+  DB_NAME=hr_system
+  ```
+
+### 2. 啟動服務
+
+- 啟動開發環境：
+  ```bash
+  make dev
+  ```
+
+- 服務將在 `http://localhost:8080` 啟動
+
+## API 端點
+
+### 員工管理
+
+- **POST** `/api/v1/employees` - 創建員工
+- **GET** `/api/v1/employees` - 取得員工列表
+- **GET** `/api/v1/employees/:id` - 取得特定員工
+
+### 請假管理
+
+- **POST** `/api/v1/leaves` - 申請請假
+- **GET** `/api/v1/leaves` - 取得請假列表
+- **GET** `/api/v1/leaves/:id` - 取得特定請假申請
+- **PUT** `/api/v1/leaves/:id/approve` - 核准請假
+- **PUT** `/api/v1/leaves/:id/reject` - 拒絕請假
+
+## 開發指令
+
+- **啟動開發環境**：
+  ```bash
+  make dev
+  ```
+
+- **資料庫遷移**：
+  ```bash
+  make migrate
+  ```
+
+- **執行測試**：
+  ```bash
+  make test
+  ```
+
+## 專案結構
+
+- **測試檔案**：放在 `tests/` 資料夾中
+- **資料庫遷移**：系統啟動時會自動執行資料庫遷移，初始化必要的表格和資料
+
+## 開發說明
+
+- 使用 `make dev` 啟動開發環境
+- 修改程式碼後，服務會自動重新載入
+- API 回應格式統一使用 JSON
+
+## 測試
+
+- 執行所有測試：
+  ```bash
+  make test
+  ```
+
+- 執行特定測試：
+  ```bash
+  go test ./tests/... -run TestSpecific
+  ```
+
+## License
+
+MIT
