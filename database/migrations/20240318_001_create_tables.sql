@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS employees (
     phone_number VARCHAR(20),
     department_id BIGINT UNSIGNED,
     position_id BIGINT UNSIGNED,
+    salary DECIMAL(10,2) NOT NULL,
     status VARCHAR(20) DEFAULT 'active',
     join_date DATE NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

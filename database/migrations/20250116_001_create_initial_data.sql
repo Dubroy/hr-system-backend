@@ -23,14 +23,15 @@ INSERT INTO employees (
     phone_number,
     department_id,
     position_id,
+    salary,
     status,
     join_date,
     created_at,
     updated_at
 ) VALUES
-    ('ENG001', 'John Doe', 'john.doe@company.com', '0912345678', 1, 2, 'active', '2023-01-01', NOW(), NOW()),
-    ('ENG002', 'Jane Smith', 'jane.smith@company.com', '0923456789', 1, 1, 'active', '2023-02-01', NOW(), NOW()),
-    ('HR001', 'Mary Johnson', 'mary.johnson@company.com', '0934567890', 2, 3, 'active', '2023-01-15', NOW(), NOW()),
-    ('MKT001', 'Robert Wilson', 'robert.wilson@company.com', '0945678901', 3, 4, 'active', '2023-03-01', NOW(), NOW()),
-    ('FIN001', 'Lisa Brown', 'lisa.brown@company.com', '0956789012', 4, 5, 'active', '2023-02-15', NOW(), NOW()),
-    ('SAL001', 'Michael Lee', 'michael.lee@company.com', '0967890123', 5, 6, 'active', '2023-04-01', NOW(), NOW()); 
+    ('ENG001', 'John Doe', 'john.doe@company.com', '0912345678', 1, 2, 85000.00, 'active', '2023-01-01', NOW(), NOW()),
+    ('ENG002', 'Jane Smith', 'jane.smith@company.com', '0923456789', 1, 1, 65000.00, 'active', '2023-02-01', NOW(), NOW()),
+    ('HR001', 'Mary Johnson', 'mary.johnson@company.com', '0934567890', 2, 3, 75000.00, 'active', '2023-01-15', NOW(), NOW()),
+    ('MKT001', 'Robert Wilson', 'robert.wilson@company.com', '0945678901', 3, 4, 60000.00, 'active', '2023-03-01', NOW(), NOW()),
+    ('FIN001', 'Lisa Brown', 'lisa.brown@company.com', '0956789012', 4, 5, 65000.00, 'active', '2023-02-15', NOW(), NOW()),
+    ('SAL001', 'Michael Lee', 'michael.lee@company.com', '0967890123', 5, 6, 55000.00, 'active', '2023-04-01', NOW(), NOW()); 
